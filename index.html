@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style type="text/css">
+
+#navbar{
+	background-color: #257AA9 !important;
+}
+
+
+#navbar a:hover{
+	color: #77BC1F !important;
+}
+
+.controls{
+	background-color: #257AA9;
+	color: white;
+	border: 1px solid black;
+	margin-bottom: 20px;
+	height: 200px;
+	display: none;
+	width: calc(100%-40px);
+	padding: 20px;
+}
+
+.btn:hover{
+	background-color: #77BC1F !important;
+	color: white !important;
+}
+
+.well {
+	border-radius: 10px;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>
+$( document ).ready( function ( ) {
+
+});
+
+</script>
+</head>
+<body>
+<!-- navigation bar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div id="navbar" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-lg">
+      <li class="nav-item mr-3 active">
+        <a class="nav-link navbar-brand" href="#" style="font-size: 1.2em;">AECT Legends and Legacies</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="#">Video Archive</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="#">Main AECT Website</a>
+      </li>
+</ul>
+</div>
+</nav>
+<!-- header -->
+<header class="jumbotron hero-spacer" style="padding-bottom: 30px; margin-bottom: 10px;"><h1 style="margin: 0 auto; text-align: center; font-size: 5vw;"><span style="font-style: italic; color: #77BC1F; font-weight: bold;">AECT</span> Legends and Legacies</h1></header>
+<div class="d-flex flex-lg-row justify-content-around">
+<div class="p-2" style="flex-basis: 50%; margin: 0 15px 0 60px;">
+<h2>Most Recent Video</h2>
+<div class="videoWrapper" style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe width="320" height="240" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/1262wr97VQI" frameborder="0" allowfullscreen=""></iframe></div>
+</div>
+<div class="p-2" style="flex-basis: 50%; margin: 0 60px 0 15px;">
+<div class="well"  style="background-color: #257AA9 !important; width: 100%; color: white; padding: 15px; margin-top: 50px;">
+<form>
+<fieldset>
+	<legend>Search AECT Legends and Legacies</legend>
+	<input type="text" name="search" id=""  placeholder="Search" style="width: 100%" class="form-control">
+	<button class="btn" style="margin-top: 30px; float: right;">Submit</button>
+</fieldset>
+</form>
+</div>
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 15px 0; padding: 10px;">Recently Added Videos</h2>
+<div class="d-flex flex-sm-row justify-content-around">
+<img class="p-2" src="http://aectlegends.org/images/atwisuparman.jpg"><img class="p-2" src="http://aectlegends.org/images/Yam.jpg">
+</div>
+</div>
+</div>
+<div>
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 15px 60px; padding: 10px;">Other Interview Videos</h2>
+</div>
+</body>
+</html>
