@@ -33,12 +33,54 @@
 	border-radius: 10px;
 }
 
+.vidImg{
+	width: 237px;
+	height: 145px;
+	padding: 0px;
+
+}
+
+.p-2.vidImg{
+	padding: 0px;
+}
+
+.layer{
+	position: absolute;
+	width: 237px;
+	height: 145px;
+	z-index: 5;
+	margin: 0px;
+	padding: 0px;
+	background-color: rgba(37,122,169,.7);
+	transition: visibility 0s, opacity 0.5s linear;
+
+}
+
+.name{
+	z-index: 10;
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	padding: 8px;
+	font-size: 1.4em; !important
+}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script>
 $( document ).ready( function ( ) {
+$(".layer").hide();
+
+$(".vidImg").hover(
+	function(){
+		$(this).children("div.layer").show("fast");
+	}, function(){
+
+	$(this).children("div.layer").hide();
+
+	}
+	);
 
 });
 
@@ -69,9 +111,13 @@ $( document ).ready( function ( ) {
 <div class="d-flex flex-lg-row justify-content-around">
 <div class="p-2" style="flex-basis: 50%; margin: 0 15px 0 60px;">
 <h2>Most Recent Video</h2>
-<div class="videoWrapper" style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe width="320" height="240" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/1262wr97VQI" frameborder="0" allowfullscreen=""></iframe></div>
+<div class="videoWrapper" style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe width="320" height="240" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/v6VwSwyzh-s" frameborder="0" allowfullscreen=""></iframe></div>
 </div>
 <div class="p-2" style="flex-basis: 50%; margin: 0 60px 0 15px;">
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 30px 0; padding: 10px;">What is the AECT Legends and Legacies Project?</h2>
+<p>The AECT Legends and Legacies Project is a collaborative endeavor among AECT members to capture the voices of leaders, past and present, in the field of educational technology. Through this initiative, an online archive of video interviews with prominent ET scholar and practitioners has been created and is now available through the AECT Website. To learn more, visit the <a href="#">About</a> page.</p>
+
 <div class="well"  style="background-color: #257AA9 !important; width: 100%; color: white; padding: 15px; margin-top: 50px;">
 <form>
 <fieldset>
@@ -81,14 +127,19 @@ $( document ).ready( function ( ) {
 </fieldset>
 </form>
 </div>
-<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 15px 0; padding: 10px;">Recently Added Videos</h2>
-<div class="d-flex flex-sm-row justify-content-around">
-<img class="p-2" src="http://aectlegends.org/images/atwisuparman.jpg"><img class="p-2" src="http://aectlegends.org/images/Yam.jpg">
-</div>
 </div>
 </div>
 <div>
-<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 15px 60px; padding: 10px;">Other Interview Videos</h2>
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 15px 60px; padding: 10px;">Recently Added Videos</h2>
+<div class="d-flex flex-sm-row justify-content-around" style="margin: 0 15px; margin-bottom: 60px;">
+<div class="p-2 vidImg" style="background-image: url('http://aectlegends.org/images/atwisuparman.jpg'); background-size: cover; padding: 0px !important"><div class="layer"></div><h3 class="name" style="color: white; margin-top: 90px; text-shadow: 0 2px 3px black;">Dr. Mary Herring</h3></div>
+<div class="p-2 vidImg" style="background-image: url('http://aectlegends.org/images/atwisuparman.jpg'); background-size: cover; padding: 0px !important"><div class="layer"></div><h3 class="name" style="color: white; margin-top: 90px; text-shadow: 0 2px 3px black;">Dr. Malcolm Fleming</h3></div>
+<div class="p-2 vidImg" style="background-image: url('http://aectlegends.org/images/atwisuparman.jpg'); background-size: cover; padding: 0px !important"><div class="layer"></div><h3 class="name" style="color: white; margin-top: 90px; text-shadow: 0 2px 3px black;">Dr. Marina McIsaac</h3></div>
+<div class="p-2 vidImg" style="background-image: url('http://aectlegends.org/images/atwisuparman.jpg'); background-size: cover; padding: 0px !important"><div class="layer"></div><h3 class="name" style="color: white; margin-top: 90px; text-shadow: 0 2px 3px black;">Dr. Leo Yam</h3></div>
+<div class="p-2 vidImg" style="background-image: url('http://aectlegends.org/images/atwisuparman.jpg'); background-size: cover; padding: 0px !important"><div class="layer"></div><h3 class="name" style="color: white; margin-top: 90px; text-shadow: 0 2px 3px black;">Dr. Richard Mayer</h3></div>
+
 </div>
+</div>
+<footer style="color: white; width: 100%; height: 60px; line-height: 60px; text-align: center; background-color: #257AA9">&copy; AECT Legends and Legacies 2018</footer>
 </body>
 </html>
