@@ -51,7 +51,7 @@
 	z-index: 5;
 	margin: 0px;
 	padding: 0px;
-	background-color: rgba(37,122,169,.7);
+	background-color: rgba(37,122,169,.6);
 	transition: visibility 0s, opacity 0.5s linear;
 
 }
@@ -71,13 +71,13 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script>
 $( document ).ready( function ( ) {
-$(".layer").hide();
+$(".layer").show();
 
 $(".vidImg").hover(
 	function(){
-		$(this).children("div.layer").show("fast");
+		$(this).children("div.layer").hide("fast");
 	}, function(){
-	$(this).children("div.layer").hide();
+	$(this).children("div.layer").show("fast");
 
 	}
 	);
