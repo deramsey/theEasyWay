@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style type="text/css">
+
+#navbar{
+	background-color: #257AA9 !important;
+}
+
+
+#navbar a:hover{
+	color: #77BC1F !important;
+}
+
+.controls{
+	background-color: #257AA9;
+	color: white;
+	border: 1px solid black;
+	margin-bottom: 20px;
+	height: 200px;
+	display: none;
+	width: calc(100%-40px);
+	padding: 20px;
+}
+
+.btn:hover{
+	background-color: #77BC1F !important;
+	color: white !important;
+}
+
+.well {
+	border-radius: 10px;
+}
+
+.vidImg{
+	width: 237px;
+	height: 145px;
+	padding: 0px;
+
+}
+
+.p-2.vidImg{
+	padding: 0px;
+}
+
+.layer{
+	position: absolute;
+	width: 237px;
+	height: 145px;
+	z-index: 5;
+	margin: 0px;
+	padding: 0px;
+	background-color: rgba(37,122,169,.6);
+	transition: visibility 0s, opacity 0.5s linear;
+
+}
+
+.name{
+	z-index: 10;
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	padding: 8px;
+	background-color: #77BC1F;
+	font-size: 1.4em; !important
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>
+$( document ).ready( function ( ) {
+$(".layer").show();
+
+$(".vidImg").hover(
+	function(){
+		$(this).children("div.layer").hide("slide", {direction: "down" }, "fast");
+		$(this).css("cursor", "pointer");
+	}, function(){
+	$(this).children("div.layer").show("slide", {direction: "up" }, "fast");
+	}
+	);
+
+});
+
+</script>
+</head>
+<body>
+<!-- navigation bar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div id="navbar" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-lg">
+      <li class="nav-item mr-3 active">
+        <a class="nav-link navbar-brand" href="index.html" style="font-size: 1.2em;">AECT Legends and Legacies</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="video.html">Video Archive</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="https://www.aect.org/">Main AECT Website</a>
+      </li>
+</ul>
+</div>
+</nav>
+<!-- header -->
+<div style="margin: 0px 15px;">
+<h1 style="font-size: 1.4em; border-bottom: 1px solid #cccccc; margin: 30px 0; padding: 10px;">About AECT Legends and Legacies</h1>
+<p>The AECT Legends and Legacies Project is a collaborative endeavor among AECT members to capture the voices of leaders, past and present, in the field of ET. Through this initiative, an online archive of video interviews with prominent ET scholar and practitioners has been created and is now available through the AECT Website.</p>
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 30px 0; padding: 10px;">Conversations with Leaders in Educational Technology</h2>
+<p>The early beginnings and evolution of the field of educational technology (ET) have been documented by various schools in the field. Recently, another form of historical documentation has been undertaken throught a project of the Association for Educational Communications and Technology (AECT).</p>
+<p>These conversations contribute to the documentation of ET's development as a discipline through the individual stories and personal insights from those who have shaped the field through their work.</p>
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 30px 0; padding: 10px;">The Future of AECT Legends and Legacies</h2>
+<p>As the AECT Legends and Legacies Project has developed as a group-based endeavor, plans for its future also depend on the input of the ET community as a whole. It is possible that interviews may be conducted by other faculty, students, or ET professionals and the added to the respository by the administrative manager at Virginia Tech.</p>
+<p>Perhaps graduate programs in ET may undertake such interviews as class projects and contribute the outcomes to the online database. It is also hoped that the interviews may grow more global in sacle, with participation from the many international leaders in the field.</p>
+<p>The infrastructure has developed such that "crowdsourcing" the interviews will allow for the capture and inclusion of these important conversations in a more scalable manner than a more limited project team approach.</p>
+<p>Another future goal is to digitize existing interviews that were recorded using older media, such as videotape or film. Several universities have indicated the availability of such recordings for inclusion in the Legends and Legacies archive.</p>
+<p>Expanding the respository to include interviews available through other media, such as audio recording and printed transcripts is also a possibility.</p>
+
+</div>
+<footer style="color: white; width: 100%; height: 60px; line-height: 60px; text-align: center; background-color: #257AA9">&copy; AECT Legends and Legacies 2018</footer>
+</body>
+</html>
