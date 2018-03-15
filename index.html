@@ -76,9 +76,9 @@ $(".layer").show();
 $(".vidImg").hover(
 	function(){
 		$(this).children("div.layer").hide("slide", {direction: "down" }, "fast");
+		$(this).css("cursor", "pointer");
 	}, function(){
 	$(this).children("div.layer").show("slide", {direction: "up" }, "fast");
-
 	}
 	);
 
