@@ -5,28 +5,81 @@
 <style type="text/css">
 
 #navbar{
-	background-color: #257AA9 !important;
+  background-color: #257AA9 !important;
 }
 
 
 #navbar a:hover{
-	color: #77BC1F !important;
+  color: #77BC1F !important;
 }
 
 .controls{
-	background-color: #257AA9;
-	color: white;
-	margin-bottom: 20px;
-	height: 200px;
-	display: none;
-	width: calc(100%-40px);
-	padding: 20px;
+  background-color: #257AA9;
+  color: white;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  height: 200px;
+  display: none;
+  width: calc(100%-40px);
+  padding: 20px;
 }
 
+.btn:hover{
+  background-color: #77BC1F !important;
+  color: white !important;
+}
+
+.well {
+  border-radius: 10px;
+}
+
+.vidImg{
+  width: 237px;
+  height: 145px;
+  padding: 0px;
+  margin-bottom: 30px;
+
+}
+
+.p-2.vidImg{
+  padding: 0px;
+}
+
+.layer{
+  position: absolute;
+  width: 237px;
+  height: 145px;
+  z-index: 5;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(37,122,169,.6);
+  transition: visibility 0s, opacity 0.5s linear;
+
+}
+
+.name{
+  z-index: 10;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  padding: 8px;
+  background-color: #77BC1F;
+  font-size: 1.4em; !important;
+}
+
+#vidContainer{
+}
+
+label{
+  padding-right: 10px;
+  padding-left: 30px;
+}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="vids.js"></script>
+
 <script>
 $( document ).ready( function ( ) {
 	$( "input[name=selType]" ).on("click", function() {
@@ -49,6 +102,17 @@ $( document ).ready( function ( ) {
     }
 
 	});
+$(".layer").show();
+
+$(".vidImg").hover(
+  function(){
+    $(this).children("div.layer").hide("slide", {direction: "down" }, "fast");
+    $(this).css("cursor", "pointer");
+  }, function(){
+  $(this).children("div.layer").show("slide", {direction: "up" }, "fast");
+  }
+  );
+
 });
 
 </script>
@@ -75,22 +139,35 @@ $( document ).ready( function ( ) {
 <div style="margin: 0px 15px;">
 <h1 style="font-size: 1.4em; border-bottom: 1px solid #cccccc; margin: 30px 0; padding: 10px;">AECT Legends and Legacies Video Archive</h1>
 <!-- Description of Video Archive -->
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget luctus turpis, nec sollicitudin libero. Praesent tempor vitae nulla et maximus. Phasellus pharetra risus sed sapien dapibus, at vulputate odio vulputate. In a orci interdum tortor consequat convallis et sed nisi. Fusce sagittis nisl leo, non consequat erat mattis sed. In diam quam, consectetur eu justo eu, fringilla elementum nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer a viverra lacus.</p>
+<p>The AECT Legends and Legacies video archive features interviews with prominent educational technology scholars and practitioners.</p>
+<p>Browse the archives to find a video that interests you or use the search features below.</p>
 <!-- form to hide/expand additional search controls -->
 <div >
-<form>
-<label for="byLname">Last Name: <input type="radio" name="selType" value="byLname" id="byLname"></label>
-<label for="byRarea">Research Area: <input type="radio" name="selType" value="byRarea" id="byRarea"></label>
-<label for="byQ">Question Asked: <input type="radio" name="selType" value="byQ" id="byQ"></label>
+<form style="background-color: #257AA9; color: white; padding: 15px;">
+<fieldset>
+  <legend>Search the Video Archive</legend>
+  <input type="text" name="search" id="vidsearch"  placeholder="Search" style="width: 100%" class="form-control">
+    <button class="btn" style="margin-top: 30px; float: right;">Submit Search</button>
+</fieldset>
+<fieldset>
+  <p>Sort by Last Name</p>
+  <label for="atog">A - G: </label><input type="radio" name="last_name" value="atog" id="atog">
+  <label for="hton">H - N: </label><input type="radio" name="last_name" value="hton" id="hton">
+  <label for="otou">O - U: </label><input type="radio" name="last_name" value="otou" id="otou">
+  <label for="vtoz">V - Z: </label><input type="radio" name="last_name" value="vtoz" id="vtoz">
+  <label for="all">Show All: </label><input type="radio" name="last_name" value="all" id="all">
+</fieldset>
 </form>
 </div>
 <div class="controls" id="nameControls">div 1</div>
 <div class="controls" id="researchControls">div 2</div>
 <div class="controls" id="questionControls">div 3</div>
+<div id="vidContainer" class="d-flex flex-sm-row justify-content-around" style="margin: 0 15px; margin-bottom: 60px; flex-flow: row wrap; margin-top: 30px;">
 
+
+</div>
 </div>
 
 <footer style="color: white; width: 100%; height: 60px; line-height: 60px; text-align: center; background-color: #257AA9; margin-top: 60px;">&copy; AECT Legends and Legacies 2018</footer>
-
 </body>
 </html>
