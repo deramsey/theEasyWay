@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+  <title>AECT Legends and Legacies | Video Archive</title>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <style type="text/css">
 
@@ -82,10 +83,10 @@ label{
 
 <script>
 $( document ).ready( function ( ) {
-	$( "input[name=selType]" ).on("click", function() {
-		var op = $( "input[name=selType]:checked" ).val();
+  $( "input[name=selType]" ).on("click", function() {
+    var op = $( "input[name=selType]:checked" ).val();
 
-		if(op === 'byLname') {
+    if(op === 'byLname') {
         $("#researchControls, #questionControls").hide();
         $("#nameControls").show("slide", {direction: "up" }, "fast");
             }
@@ -101,7 +102,7 @@ $( document ).ready( function ( ) {
         $("#questionControls").show("slide", {direction: "up" }, "fast");
     }
 
-	});
+  });
 $(".layer").show();
 
 $(".vidImg").hover(

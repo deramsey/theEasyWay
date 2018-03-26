@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style type="text/css">
+
+#navbar{
+	background-color: #257AA9 !important;
+}
+
+
+#navbar a:hover{
+	color: #77BC1F !important;
+}
+
+.controls{
+	background-color: #257AA9;
+	color: white;
+	border: 1px solid black;
+	margin-bottom: 20px;
+	height: 200px;
+	display: none;
+	width: calc(100%-40px);
+	padding: 20px;
+}
+
+.btn:hover{
+	background-color: #77BC1F !important;
+	color: white !important;
+}
+
+.well {
+	border-radius: 10px;
+}
+
+.vidImg{
+	width: 237px;
+	height: 145px;
+	padding: 0px;
+
+}
+
+.p-2.vidImg{
+	padding: 0px;
+}
+
+.layer{
+	position: absolute;
+	width: 237px;
+	height: 145px;
+	z-index: 5;
+	margin: 0px;
+	padding: 0px;
+	background-color: rgba(37,122,169,.6);
+	transition: visibility 0s, opacity 0.5s linear;
+
+}
+
+.name{
+	z-index: 10;
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	padding: 8px;
+	background-color: #77BC1F;
+	font-size: 1.4em; !important
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>
+var vidInfo = {
+	title: "Dr.",
+	fname: "David",
+	lname: "Merrill",
+	url: "7COb2aZDrcs",
+	bio: "Bio not available",
+	tags: ""
+};
+
+var questions = [
+	{key: "Would you tell us about yourself?", value: "16"},
+	{key: "How would you describe your interests and aspirations when you first started your career? How did they change with time?", value: "1464"},
+	{key: "What are some of the major changes that you have seen in the profession during your career?", value: "2066"},
+	{key: "What are your primary focus of your work during your career?", value: "69"},
+	{key: "What were some of the major ideas or approaches that stimulated your professional growth?", value: "2479"},
+	{key: "What do you think was the greatest accomplishment of your career? Why?", value: "2787"},
+	{key: "How do you want to be remembered within the profession?", value: "3026"},
+	{key: "How would you describe expectations for computer-based instruction?", value: "638"},
+	{key: "Would you describe your career path?", value: "967"},
+
+];
+
+$( document ).ready(function(){
+	$(".iname").text(vidInfo["title"] + " " + vidInfo["fname"] + " " + vidInfo["lname"]);
+	$(".videoWrapper").append("<iframe width='320' name='vidCont' height='240' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0px;' src='https://www.youtube.com/embed/" + vidInfo['url'] + "' frameborder='0' allowfullscreen=''></iframe>");
+	$(".bio").text(vidInfo["bio"]);
+	$(".tags").text(vidInfo["tags"]);
+});
+
+$( document ).ready(function(){
+		$.each(questions, function(q){
+		$('.topics').append("<a href='https://www.youtube.com/embed/" + vidInfo['url'] +"?start="+ questions[q]['value'] + "&autoplay=1' target='vidCont'>▪ "+questions[q]['key']+"</a><br>");
+	});
+});
+
+</script>
+</head>
+<body>
+<!-- navigation bar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div id="navbar" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-lg">
+      <li class="nav-item mr-3 active">
+        <a class="nav-link navbar-brand" href="../index.html" style="font-size: 1.2em;">AECT Legends and Legacies</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="../about.html">About</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="../video.html">Video Archive</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="https://www.aect.org/">Main AECT Website</a>
+      </li>
+</ul>
+</div>
+</nav>
+<!-- header -->
+
+<div class="d-flex flex-lg-row justify-content-around">
+<div class="p-2" style="flex-basis: 50%; margin: 0 15px 0 60px;">
+	<a href="../video.html">< Return to Video Archive</a>
+<h1 style="font-size: 1.4em; border-bottom: 1px solid #cccccc; margin: 30px 0; padding: 10px;" class="iname"></h1>
+<div class="videoWrapper" style="position: relative; padding-bottom: 56.25%; height: 0;"></div>
+</div>
+<div class="p-2" style="flex-basis: 50%; margin: 0 60px 0 15px;">
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 120px 0 30px 0; padding: 10px;">Biography</h2>
+<p class="bio" style="padding: 10px;"></p>
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 30px 0 30px 0; padding: 10px;">Topics</h2>
+<p class="topics" style="padding: 10px;"></p>
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #cccccc; margin: 30px 0 30px 0; padding: 10px;">Tags</h2>
+<p class="tags" style="padding: 10px;"></p>
+
+</div>
+</div>
+<div>
+
+
+</div>
+</div>
+<footer style="color: white; width: 100%; height: auto; line-height: 30px; text-align: center; background-color: #257AA9; padding: 15px 0; margin-top: 60px;">&copy; AECT Legends and Legacies 2018</footer>
+</body>
+</html>
