@@ -72,11 +72,11 @@
 <script>
 var vidInfo = {
 	title: "Dr.",
-	fname: "Ely",
-	lname: "Donald",
+	fname: "Donald",
+	lname: "Ely",
 	url: "eikGCHxIhYo",
 	bio: "AECT Past President 1965-66<br>Professor Emeritus Syracuse University School of Education",
-	tags: ""
+	tags: "Donald, Ely, instructional, technology, education, clearinghouse"
 };
 
 var questions = [
@@ -90,7 +90,7 @@ var questions = [
 $( document ).ready(function(){
 	$(".iname").text(vidInfo["title"] + " " + vidInfo["fname"] + " " + vidInfo["lname"]);
 	$(".videoWrapper").append("<iframe width='320' name='vidCont' height='240' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0px;' src='https://www.youtube.com/embed/" + vidInfo['url'] + "' frameborder='0' allowfullscreen=''></iframe>");
-	$(".bio").text(vidInfo["bio"]);
+	$(".bio").append(vidInfo["bio"]);
 	$(".tags").text(vidInfo["tags"]);
 });
 
