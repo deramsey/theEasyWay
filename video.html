@@ -147,9 +147,24 @@ $(".vidImg").hover(
 <form style="background-color: #257AA9; color: white; padding: 15px;">
 <fieldset>
   <legend>Search the Video Archive</legend>
-  <input type="text" name="search" id="vidsearch"  placeholder="Search" style="width: 100%" class="form-control">
+  <input type="text" name="search" id="vidsearch"  placeholder="Search" style="width: 100%" class="form-control" onkeyup="filter(this)">
     <button class="btn" style="margin-top: 30px; float: right;">Submit Search</button>
 </fieldset>
+
+<script language="javascript" type="text/javascript">
+    function filter(element) {
+        var value = $(element).val();
+
+        $(".vidImg").each(function() {
+            if ($(this).text().search(value) > -1) {
+                $(this).show();
+            }
+            else {
+                $(this).hide();
+            }
+        });
+    }
+</script>
 <fieldset>
   <p>Sort by Last Name</p>
   <label for="atog">A - G: </label><input type="radio" name="last_name" value="atog" id="atog">
